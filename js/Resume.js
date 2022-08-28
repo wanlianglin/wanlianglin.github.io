@@ -2,7 +2,7 @@
 			$(function(){
 				// 获取窗口和navbar的DOM元素
 				var $window = $(window);
-				var $navbarTop = $('.navbar').offset().top;
+				var $navbarTop = $('.topnavbar').offset().top;
 				var $liNodes = $('nav > .list > li');
 				var $arrow = $('nav > .arrow');
 				var $a = $('nav > .list > li > a');
@@ -12,9 +12,9 @@
 				$window.scroll(function(){
 					var $scrollTop = $window.scrollTop();
 					if ($scrollTop >= $navbarTop) {
-						$('.navbar').addClass('fixed');
+						$('.topnavbar').addClass('fixed');
 					} else{
-						$('.navbar').removeClass('fixed');
+						$('.topnavbar').removeClass('fixed');
 					}
 				})
 				// 同步当前屏的索引
